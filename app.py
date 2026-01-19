@@ -132,11 +132,11 @@ raw_quiz_pool = [
         "hint": "User Fix: Tomireng"
     },
     {
-        "q": "單字測驗：Mananaw",
+        "q": "單字測驗：Minanaw",
         "audio": "Minanaw",
         "options": ["洗 (手/腳/物)", "洗臉", "洗澡"],
         "ans": "洗 (手/腳/物)",
-        "hint": "User Fix: Mananaw"
+        "hint": "User Fix: Minanaw"
     },
     {
         "q": "單字測驗：Malalo'op",
@@ -257,3 +257,4 @@ with tab2:
             
             st.session_state.quiz_questions = final_qs
             safe_rerun()
+
