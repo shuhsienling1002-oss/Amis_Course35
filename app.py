@@ -73,10 +73,10 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- 2. 資料庫 (Unit 35: 18個單字 - 身體與動作) ---
+# --- 2. 資料庫 (Unit 35: 18個單字 - User Fix) ---
 vocab_data = [
     {"amis": "Tireng", "chi": "身體 / 站立 (詞根)", "icon": "🧍", "source": "Row 421", "morph": "Root"},
-    {"amis": "Mitireng", "chi": "站立 / 站著", "icon": "🧍‍♂️", "source": "Row 421", "morph": "Mi-Tireng"},
+    {"amis": "Tomireng", "chi": "站立 / 站著", "icon": "🧍‍♂️", "source": "User Fix", "morph": "Tireng + -om-"}, # 修正
     {"amis": "Kamay", "chi": "手", "icon": "✋", "source": "Row 998", "morph": "Noun"},
     {"amis": "Tanokamay", "chi": "徒手 / 用手", "icon": "🙌", "source": "Row 1090", "morph": "Tano-Kamay"},
     {"amis": "Wa'ay", "chi": "腳", "icon": "🦶", "source": "Row 6101", "morph": "Noun"},
@@ -90,21 +90,21 @@ vocab_data = [
     {"amis": "Fokes", "chi": "頭髮", "icon": "💇", "source": "Row 4523", "morph": "Noun"},
     {"amis": "Sapafangsis", "chi": "使...香的東西 (香水)", "icon": "🌺", "source": "Row 998", "morph": "Sa-Pa-Fangsis"},
     {"amis": "Fangsis", "chi": "香 / 香味 (詞根)", "icon": "🌸", "source": "Row 998", "morph": "Root"},
-    {"amis": "Mibanaw", "chi": "洗 (手/腳/物)", "icon": "🧼", "source": "Standard", "morph": "Mi-Banaw"},
-    {"amis": "Miso'so'", "chi": "洗 (臉)", "icon": "🧖", "source": "Standard", "morph": "Mi-So'so'"},
+    {"amis": "Minanaw", "chi": "洗 (手/腳/物)", "icon": "🧼", "source": "User Fix", "morph": "Verb"}, # 修正
+    {"amis": "Malalo'op", "chi": "洗 (臉)", "icon": "🧖", "source": "User Fix", "morph": "Verb"}, # 修正
     {"amis": "Mirepet", "chi": "抓 / 握", "icon": "✊", "source": "Standard", "morph": "Mi-Repet"},
 ]
 
 # --- 句子庫 (9句: 嚴格源自 CSV 並移除連字號) ---
 sentences = [
-    {"amis": "Mitireng ci Nakaw i papotal.", "chi": "Nakaw在外面站著。", "icon": "🧍‍♀️", "source": "Row 421"},
+    {"amis": "Tomireng ci Nakaw i papotal.", "chi": "Nakaw在外面站著。", "icon": "🧍‍♀️", "source": "Row 421 (User Fix)"},
     {"amis": "O sapafangsis ni ina to kamay korira.", "chi": "那些是媽媽用來讓手香香的(東西)。", "icon": "🌺", "source": "Row 998"},
     {"amis": "Tanokamay kako a matayal.", "chi": "我徒手工作。", "icon": "🙌", "source": "Row 1090"},
     {"amis": "Fanges no pising.", "chi": "臉的皮膚。", "icon": "🙂", "source": "Row 5360"},
     {"amis": "Mirepet to fokes.", "chi": "抓頭髮。", "icon": "💇", "source": "Standard Phrase"},
-    {"amis": "Mibanaw to kamay.", "chi": "洗手。", "icon": "🧼", "source": "Standard Phrase"},
-    {"amis": "Miso'so' to pising.", "chi": "洗臉。", "icon": "🧖", "source": "Standard Phrase"},
-    {"amis": "O ngoyos ko sapicomikay.", "chi": "用嘴巴呼吸(跑步時)。", "icon": "👄", "source": "Adapted from Row 2380 context"},
+    {"amis": "Minanaw to kamay.", "chi": "洗手。", "icon": "🧼", "source": "User Fix"},
+    {"amis": "Malalo'op (Malali'op) to pising.", "chi": "洗臉。", "icon": "🧖", "source": "User Fix"},
+    {"amis": "O ngoyos ko sapicomikay.", "chi": "用嘴巴呼吸(跑步時)。", "icon": "👄", "source": "Adapted"},
     {"amis": "Tangoso'an.", "chi": "鼻子的裝備(呼吸器/鼻罩)。", "icon": "👃", "source": "Row 2381"},
 ]
 
@@ -125,25 +125,25 @@ raw_quiz_pool = [
         "hint": "Sapafangsis (使...香), Kamay (手) (Row 998)"
     },
     {
-        "q": "單字測驗：Mitireng",
-        "audio": "Mitireng",
+        "q": "單字測驗：Tomireng",
+        "audio": "Tomireng",
         "options": ["站立/站著", "坐下", "躺著"],
         "ans": "站立/站著",
-        "hint": "Tireng (身體) -> Mitireng (站立)"
+        "hint": "User Fix: Tomireng"
     },
     {
-        "q": "單字測驗：Fanges",
-        "audio": "Fanges",
-        "options": ["皮膚", "骨頭", "血液"],
-        "ans": "皮膚",
-        "hint": "Fanges no pising (臉皮) (Row 5360)"
+        "q": "單字測驗：Mananaw",
+        "audio": "Minanaw",
+        "options": ["洗 (手/腳/物)", "洗臉", "洗澡"],
+        "ans": "洗 (手/腳/物)",
+        "hint": "User Fix: Mananaw"
     },
     {
-        "q": "單字測驗：Tangoyosan",
-        "audio": "Tangoyosan",
-        "options": ["口罩/嘴部裝備", "耳環", "眼鏡"],
-        "ans": "口罩/嘴部裝備",
-        "hint": "Ta-..-an (裝備) + Ngoyos (嘴)"
+        "q": "單字測驗：Malalo'op",
+        "audio": "Malalo'op",
+        "options": ["洗臉", "洗手", "刷牙"],
+        "ans": "洗臉",
+        "hint": "User Fix: Malalo'op (洗臉)"
     }
 ]
 
@@ -167,7 +167,7 @@ if 'init' not in st.session_state:
 
 # --- 5. 主介面 ---
 st.markdown("<h1 style='text-align: center; color: #BF360C;'>Unit 35: O Tireng</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #666;'>身體與動作 (Body & Morphology)</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: #666;'>身體與動作 (User Corrected)</p>", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["📚 詞彙與句型", "🎲 隨機挑戰"])
 
